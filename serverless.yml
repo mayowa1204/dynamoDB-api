@@ -23,7 +23,7 @@ functions:
     timeout: 5 # seconds
     events:
       - http:
-          path: post/{songId}
+          path: song/{songId}
           method: GET
     iamRoleStatements:
       - Effect: "Allow"
@@ -37,7 +37,7 @@ functions:
     timeout: 5 # seconds
     events:
       - http:
-          path: Song
+          path: song
           method: POST
     iamRoleStatements:
       - Effect: "Allow"
@@ -51,7 +51,7 @@ functions:
     timeout: 5 # seconds
     events:
       - http:
-          path: post/{songId}
+          path: song/{songId}
           method: PUT
     iamRoleStatements:
       - Effect: "Allow"
@@ -65,7 +65,7 @@ functions:
     timeout: 5 # seconds
     events:
       - http:
-          path: post/{songId}
+          path: song/{songId}
           method: DELETE
     iamRoleStatements:
       - Effect: "Allow"
@@ -79,7 +79,7 @@ functions:
     timeout: 5 # seconds
     events:
       - http:
-          path: posts
+          path: songs
           method: GET
     iamRoleStatements:
       - Effect: "Allow"
