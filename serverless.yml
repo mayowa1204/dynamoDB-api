@@ -11,9 +11,18 @@ provider:
 
 custom:
   songsTableName: songs-table-${self:provider.stage}
+  dynamodb:
+    stages:
+      - dev
+    start:
+      migrate: true
+  serverless-offline:
+    resourceRouted: true 
 
 plugins:
   - serverless-iam-roles-per-function
+  - serverless-dynamodb-local
+  - serverless-offline
 
 functions:
   getSong:
