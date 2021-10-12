@@ -59,7 +59,8 @@ functions:
       - Effect: "Allow"
         Action:
           - "dynamodb:UpdateItem"
-        Resource: !GetAtt SongsTable.Arn
+        Resource: 
+        - {Fn::GetAtt: [SongTable, Arn]}  
   deleteSong:
     handler: api.deleteSong
     name: delete-song
