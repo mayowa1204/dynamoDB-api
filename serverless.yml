@@ -90,7 +90,7 @@ functions:
 
 resources:
   Resources:
-    PostsTable:
+    SongsTable:
       Type: AWS::DynamoDB::Table
       Properties:
         TableName: ${self:custom.songsTableName}
