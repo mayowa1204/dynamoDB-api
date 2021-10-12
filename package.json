@@ -1,0 +1,24 @@
+{
+  "name": "dynamodb-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayowa1204/dynamoDB-api.git"
+  },
+  "author": "Mayowa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayowa1204/dynamoDB-api/issues"
+  },
+  "homepage": "https://github.com/mayowa1204/dynamoDB-api#readme",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.36.0",
+    "@aws-sdk/util-dynamodb": "^3.36.0",
+    "serverless-iam-roles-per-function": "^3.2.0"
+  }
+}
