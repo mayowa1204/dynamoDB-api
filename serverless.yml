@@ -30,7 +30,7 @@ functions:
         Action:
           - "dynamodb:GetItem"
         Resource: 
-          - {!GetAtt SongTable.Arn}
+          - {Fn::GetAtt: [SongTable, Arn]}
   createSong:
     handler: api.createSong
     name: create-song
@@ -45,7 +45,7 @@ functions:
         Action:
           - "dynamodb:PutItem"
         Resource: 
-          - {!GetAtt SongTable.Arn}        
+          - {Fn::GetAtt: [SongTable, Arn]}        
   updateSong:
     handler: api.updateSong
     name: update-song
@@ -74,7 +74,7 @@ functions:
         Action:
           - "dynamodb:DeleteItem"
         Resource: 
-          - {!GetAtt SongTable.Arn}        
+          - {Fn::GetAtt: [SongTable, Arn]}        
   getAllSongs:
     handler: api.getAllSongs
     name: get-all-songs
@@ -89,7 +89,7 @@ functions:
         Action:
           - "dynamodb:Scan"
         Resource: 
-          - {!GetAtt SongTable.Arn}        
+          - {Fn::GetAtt: [SongTable, Arn]}        
 
 resources:
   Resources:
