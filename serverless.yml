@@ -7,10 +7,10 @@ provider:
   stage: dev
   region: eu-west-2
   environment:
-    DYNAMODB_TABLE_NAME: ${self:custom.postsTableName}
+    DYNAMODB_TABLE_NAME: ${self:custom.songsTableName}
 
 custom:
-  songsTableName: posts-table-${self:provider.stage}
+  songsTableName: songs-table-${self:provider.stage}
 
 plugins:
   - serverless-iam-roles-per-function
