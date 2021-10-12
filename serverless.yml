@@ -30,7 +30,7 @@ functions:
         Action:
           - "dynamodb:GetItem"
         Resource: 
-          - {Fn::GetAtt: [SongTable, Arn]}
+          - !GetAtt SongTable.Arn
   createSong:
     handler: api.createSong
     name: create-song
